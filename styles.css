@@ -1,0 +1,177 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(
+    315deg,
+    rgb(243, 120, 234) 3%,
+    rgba(60, 132, 206, 1) 38%,
+    rgba(48, 238, 226, 1) 68%,
+    rgb(239, 109, 109) 98%
+  );
+  height: 100vh;
+  margin: 50px;
+  overflow: auto;
+  animation: gradient 15s ease infinite;
+  background-size: 900% 500%;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-container {
+  width: 25%;
+  /* height: 50%; */
+  border-radius: 3mm;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  border: 2px solid black;
+
+  margin: auto;
+  z-index: 2;
+}
+form {
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: contents;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 1;
+}
+
+#regForm button {
+  margin-top: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  color: black;
+}
+#regForm h1 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  border: 2px solid #c55252;
+  border-radius: 4px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.input-group .error {
+  color: red;
+  margin-top: -8px;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 3;
+}
+.input-group.success input {
+  border-color: #00bb09;
+}
+.input-group.error input {
+  color: rgb(242, 18, 18);
+}
+#timerContainer {
+  background-color: #c55252;
+  color: #fff;
+  border: black;
+  border-radius: 2px;
+  padding: 5px;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .form-container {
+    width: 70%; /* Adjusted width for medium-sized screens */
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .form-container {
+    width: 50%; /* Adjusted width for larger screens */
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.wave {
+  background: rgb(255 255 255 / 25%);
+  border-radius: 1000% 1000% 0 0;
+  position: fixed;
+  width: 200%;
+  height: 12em;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+  bottom: -1.25em;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+  bottom: -2.5em;
+  animation: wave 20s -1s reverse infinite;
+  opacity: 0.9;
+}
+
+@keyframes wave {
+  2% {
+    transform: translateX(1);
+  }
+
+  25% {
+    transform: translateX(-25%);
+  }
+
+  50% {
+    transform: translateX(-50%);
+  }
+
+  75% {
+    transform: translateX(-25%);
+  }
+
+  100% {
+    transform: translateX(1);
+  }
+}

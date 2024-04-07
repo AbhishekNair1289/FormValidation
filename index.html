@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <title>Dynamic Form</title>
+</head>
+
+<body>
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+
+  <!-- <div class="center"> -->
+  <div class="form-container">
+
+    <div class="wave"></div>
+    <div id="timerContainer">Time left: <span id="timer"></span></div>
+    <form id="regForm" action="/">
+      <h1 id="regh1"> Registration Form </h1>
+
+      <div class="input-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Abc" name="name" minlength="3" maxlength="20" autocomplete="off" />
+        <div id="nameError" class="error"></div>
+      </div>
+
+      <div class="input-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="abc@gmail.com" name="email" maxlength="30" autocomplete="off" />
+        <div id="emailError" class="error"></div>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter Your Password" name="password" minlength="8"
+          maxlength="20" autocomplete="off" />
+        <div id="passwordError" class="error"></div>
+      </div>
+
+      <div class="input-group">
+        <label for="conpassword">Confirm Password:</label>
+        <input type="password" id="conpassword" placeholder="Re-enter Your Password" name="confirmPassword"
+          minlength="8" maxlength="20" autocomplete="off" />
+        <div id="conpasswordError" class="error"></div>
+      </div>
+
+      <div class="input-group">
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" placeholder="9876543210" name="phone" minlength="10" maxlength="10"
+          autocomplete="off" />
+        <div id="phoneError" class="error"></div>
+      </div>
+
+      <div class="input-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" placeholder="DD/MM/YYYY" id="dob" name="dob" autocomplete="off" />
+        <div id="dobError" class="error"></div>
+      </div>
+      <div class="error" id="error-message"></div>
+      <button type="submit" id="submitBtn"> Submit </button>
+    </form>
+
+    <!-- </div> -->
+    <script src="./index1.js"></script>
+</body>
+
+
+</html>
